@@ -1,0 +1,140 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="toxicGlow" cx="50%" cy="90%" r="50%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.45"/>
+      <stop offset="100%" stop-color="#020a06" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="steamGlow" cx="35%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#d1fae5" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#020a06" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="greenGlow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Dark industrial background -->
+  <rect width="800" height="500" fill="#060e09"/>
+
+  <!-- Wall bricks (pixel style) -->
+  <!-- Row 1 -->
+  <rect x="0" y="0" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="100" y="0" width="98" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="200" y="0" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="300" y="0" width="98" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="400" y="0" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="500" y="0" width="98" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="600" y="0" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="700" y="0" width="100" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <!-- Row 2 (offset) -->
+  <rect x="0" y="30" width="48" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="50" y="30" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="150" y="30" width="98" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="250" y="30" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="350" y="30" width="98" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="450" y="30" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="550" y="30" width="98" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+  <rect x="650" y="30" width="98" height="28" fill="#0a1a0e" stroke="#050d07" stroke-width="1"/>
+  <rect x="752" y="30" width="48" height="28" fill="#091608" stroke="#050d07" stroke-width="1"/>
+
+  <!-- Ceiling pipes (vertical hangers) -->
+  <rect x="180" y="0" width="8" height="70" fill="#0d1e10"/>
+  <rect x="380" y="0" width="8" height="70" fill="#0d1e10"/>
+  <rect x="580" y="0" width="8" height="70" fill="#0d1e10"/>
+
+  <!-- MAIN HORIZONTAL PIPES -->
+  <!-- Pipe 1 (top, where child walks) -->
+  <rect x="0" y="182" width="800" height="22" fill="#12261a" rx="4"/>
+  <rect x="0" y="184" width="800" height="4" fill="#1a3824" opacity="0.7"/>
+  <rect x="0" y="198" width="800" height="4" fill="#0a1610" opacity="0.8"/>
+  <!-- Pipe bolts -->
+  <rect x="92" y="180" width="16" height="26" rx="3" fill="#0e1e14"/>
+  <rect x="282" y="180" width="16" height="26" rx="3" fill="#0e1e14"/>
+  <rect x="472" y="180" width="16" height="26" rx="3" fill="#0e1e14"/>
+  <rect x="662" y="180" width="16" height="26" rx="3" fill="#0e1e14"/>
+  <!-- Bolt holes -->
+  <rect x="98" y="186" width="4" height="4" fill="#050d07" rx="1"/>
+  <rect x="288" y="186" width="4" height="4" fill="#050d07" rx="1"/>
+  <rect x="478" y="186" width="4" height="4" fill="#050d07" rx="1"/>
+  <rect x="668" y="186" width="4" height="4" fill="#050d07" rx="1"/>
+
+  <!-- Pipe 2 (middle, below) -->
+  <rect x="0" y="290" width="800" height="18" fill="#0f1e13" rx="3"/>
+  <rect x="0" y="292" width="800" height="3" fill="#162a1a" opacity="0.6"/>
+  <!-- Pipe 2 bolts -->
+  <rect x="140" y="288" width="12" height="22" rx="2" fill="#0b1710" />
+  <rect x="340" y="288" width="12" height="22" rx="2" fill="#0b1710"/>
+  <rect x="540" y="288" width="12" height="22" rx="2" fill="#0b1710"/>
+
+  <!-- Pipe 3 (lower) -->
+  <rect x="0" y="360" width="800" height="14" fill="#0c1a0f" rx="2"/>
+
+  <!-- Dripping green liquid -->
+  <!-- Drip 1 -->
+  <rect x="200" y="204" width="4" height="30" fill="#10b981" opacity="0.7"/>
+  <ellipse cx="202" cy="238" rx="5" ry="4" fill="#10b981" opacity="0.8"/>
+  <rect x="201" y="242" width="2" height="18" fill="#10b981" opacity="0.5"/>
+  <!-- Drip 2 -->
+  <rect x="440" y="204" width="3" height="22" fill="#10b981" opacity="0.6"/>
+  <ellipse cx="441" cy="229" rx="4" ry="3" fill="#10b981" opacity="0.7"/>
+  <rect x="440" y="232" width="2" height="30" fill="#10b981" opacity="0.4"/>
+  <!-- Drip 3 -->
+  <rect x="620" y="204" width="4" height="40" fill="#10b981" opacity="0.65"/>
+  <ellipse cx="622" cy="247" rx="5" ry="4" fill="#10b981" opacity="0.8"/>
+
+  <!-- Pipes vertical (connector) -->
+  <rect x="60" y="204" width="12" height="180" fill="#0c1a0f"/>
+  <rect x="700" y="204" width="12" height="180" fill="#0c1a0f"/>
+
+  <!-- Steam cloud (left side) -->
+  <ellipse cx="60" cy="165" rx="30" ry="20" fill="#ecfdf5" opacity="0.06" filter="url(#softBlur)"/>
+  <ellipse cx="80" cy="150" rx="22" ry="16" fill="#ecfdf5" opacity="0.04" filter="url(#softBlur)"/>
+
+  <!-- TOXIC GREEN SWAMP (bottom) -->
+  <rect x="0" y="390" width="800" height="110" fill="#020e06"/>
+  <!-- Swamp surface wave (pixel style) -->
+  <rect x="0" y="390" width="800" height="6" fill="#064e3b" opacity="0.8"/>
+  <!-- Green glow on swamp -->
+  <rect width="800" height="500" fill="url(#toxicGlow)"/>
+  <!-- Swamp bubbles -->
+  <ellipse cx="120" cy="410" rx="8" ry="5" fill="#10b981" opacity="0.25"/>
+  <ellipse cx="320" cy="425" rx="12" ry="7" fill="#10b981" opacity="0.2"/>
+  <ellipse cx="550" cy="415" rx="9" ry="6" fill="#10b981" opacity="0.3"/>
+  <ellipse cx="720" cy="430" rx="11" ry="7" fill="#059669" opacity="0.2"/>
+  <!-- Swamp glow pixel details -->
+  <rect x="80" y="395" width="6" height="6" fill="#10b981" opacity="0.3"/>
+  <rect x="280" y="400" width="4" height="4" fill="#10b981" opacity="0.25"/>
+  <rect x="500" y="393" width="8" height="5" fill="#34d399" opacity="0.2"/>
+  <rect x="680" y="398" width="6" height="6" fill="#10b981" opacity="0.3"/>
+
+  <!-- Steam glow overlay -->
+  <rect width="800" height="500" fill="url(#steamGlow)"/>
+
+  <!-- CHILD SILHOUETTE (walking on main pipe) -->
+  <!-- Head -->
+  <ellipse cx="310" cy="165" rx="12" ry="14" fill="#020605"/>
+  <!-- Hood -->
+  <rect x="297" y="154" width="26" height="12" rx="5" fill="#020605"/>
+  <!-- Body/raincoat (oversized) -->
+  <rect x="296" y="173" width="28" height="36" rx="4" fill="#020605"/>
+  <!-- Arms -->
+  <rect x="283" y="175" width="14" height="26" rx="3" fill="#020605"/>
+  <rect x="323" y="175" width="14" height="26" rx="3" fill="#020605"/>
+  <!-- Legs -->
+  <rect x="299" y="206" width="10" height="16" fill="#020605"/>
+  <rect x="311" y="206" width="10" height="16" fill="#020605"/>
+  <!-- Feet on pipe -->
+  <rect x="296" y="181" width="12" height="5" rx="1" fill="#020605"/>
+  <rect x="311" y="181" width="12" height="5" rx="1" fill="#020605"/>
+
+  <!-- Lantern (child holding) -->
+  <rect x="282" y="190" width="5" height="7" rx="1" fill="#34d399" opacity="0.9" filter="url(#greenGlow)"/>
+  <ellipse cx="284" cy="193" rx="7" ry="7" fill="#10b981" opacity="0.2" filter="url(#softBlur)"/>
+
+  <!-- Pixel scan lines (for retro feel) -->
+  <rect x="0" y="0" width="800" height="500" fill="url(#scanlines)" opacity="0.3"/>
+</svg>

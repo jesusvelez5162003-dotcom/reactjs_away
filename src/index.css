@@ -1,0 +1,286 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Outfit:wght@400;600;800;900&display=swap');
+
+:root {
+  --font-header: 'Outfit', sans-serif;
+  --font-body: 'Montserrat', sans-serif;
+
+  /* Color Palette - Light Riot Games Aesthetic (Whites and Light Greens) */
+  --bg-primary: #ffffff;
+  --bg-secondary: #f6faf7;
+  --bg-dark-contrast: #0b130e; /* For sections requiring dark-contrast or dark mode overlays */
+  
+  --accent-color: #10b981; /* Premium Emerald/Mint light green */
+  --accent-glow: rgba(16, 185, 129, 0.3);
+  --accent-bright: #34d399; /* Brighter neon-ish green for hover state */
+  --accent-dark: #065f46;
+  
+  --text-primary: #111827; /* Near black */
+  --text-secondary: #4b5563; /* Cool gray */
+  --text-light: #9ca3af; /* Light gray */
+  --text-on-dark: #f9fafb;
+  
+  --border-color: #e5e7eb;
+  --border-accent: rgba(16, 185, 129, 0.2);
+  --border-accent-strong: rgba(16, 185, 129, 0.8);
+  
+  --transition-fast: 0.2s ease;
+  --transition-smooth: 0.4s cubic-bezier(0.25, 1, 0.5, 1);
+  --header-height: 80px;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--font-body);
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: var(--font-header);
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Riot Style Layout Helpers */
+.riot-container {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 0 2rem;
+  width: 100%;
+}
+
+/* Riot Geometric Accent Elements */
+.riot-border-accent {
+  position: relative;
+}
+
+.riot-border-accent::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 4px;
+  height: 100%;
+  background-color: var(--accent-color);
+}
+
+/* Riot Games Angled Button */
+.riot-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  font-family: var(--font-header);
+  font-weight: 900;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  padding: 0.9rem 2.2rem;
+  font-size: 0.95rem;
+  cursor: pointer;
+  border: none;
+  background: none;
+  color: var(--text-primary);
+  transition: var(--transition-fast);
+  z-index: 1;
+}
+
+.riot-btn::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparent;
+  border: 1.5px solid var(--text-primary);
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.riot-btn::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--text-primary);
+  clip-path: polygon(8px 0%, 100% 0%, calc(100% - 8px) 100%, 0% 100%);
+  transform: scaleX(0);
+  transform-origin: left;
+  transition: var(--transition-smooth);
+  z-index: -1;
+}
+
+.riot-btn:hover {
+  color: var(--bg-primary);
+}
+
+.riot-btn:hover::after {
+  transform: scaleX(1);
+}
+
+/* Riot Games Accent Button (Green) */
+.riot-btn-accent {
+  color: var(--text-on-dark);
+}
+
+.riot-btn-accent::before {
+  background-color: var(--accent-color);
+  border-color: var(--accent-color);
+}
+
+.riot-btn-accent::after {
+  background-color: var(--accent-bright);
+}
+
+.riot-btn-accent:hover {
+  color: var(--text-primary);
+  box-shadow: 0 0 15px var(--accent-glow);
+}
+
+/* Riot Games Secondary Button (Light Green Outline) */
+.riot-btn-outline {
+  color: var(--text-primary);
+}
+
+.riot-btn-outline::before {
+  border-color: var(--accent-color);
+}
+
+.riot-btn-outline::after {
+  background-color: var(--accent-color);
+}
+
+.riot-btn-outline:hover {
+  color: white;
+}
+
+/* Riot Style Title */
+.riot-title-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-bottom: 2rem;
+}
+
+.riot-title {
+  font-size: 3rem;
+  font-weight: 900;
+  line-height: 1;
+  position: relative;
+  z-index: 1;
+}
+
+.riot-title-bg {
+  position: absolute;
+  bottom: -4px;
+  left: -10px;
+  right: -10px;
+  height: 12px;
+  background-color: var(--accent-glow);
+  z-index: 0;
+  transform: skewX(-15deg);
+}
+
+/* Geometric Card / Panel */
+.riot-card {
+  background-color: var(--bg-primary);
+  border: 1px solid var(--border-color);
+  padding: 2.5rem;
+  position: relative;
+  clip-path: polygon(0 0, calc(100% - 15px) 0, 100% 15px, 100% 100%, 15px 100%, 0 calc(100% - 15px));
+  transition: var(--transition-smooth);
+}
+
+.riot-card::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 15px;
+  height: 15px;
+  background-color: var(--accent-color);
+  transition: var(--transition-fast);
+}
+
+.riot-card:hover {
+  border-color: var(--accent-color);
+  transform: translateY(-4px);
+  box-shadow: 0 10px 30px rgba(16, 185, 129, 0.08);
+}
+
+.riot-card:hover::after {
+  background-color: var(--accent-bright);
+}
+
+/* Styled Form Fields */
+.riot-form-group {
+  margin-bottom: 1.5rem;
+}
+
+.riot-form-group label {
+  display: block;
+  font-family: var(--font-header);
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.5rem;
+  color: var(--text-secondary);
+}
+
+.riot-input {
+  width: 100%;
+  padding: 0.9rem 1.2rem;
+  font-family: var(--font-body);
+  font-size: 0.95rem;
+  background-color: var(--bg-secondary);
+  border: 1.5px solid var(--border-color);
+  color: var(--text-primary);
+  outline: none;
+  transition: var(--transition-fast);
+  clip-path: polygon(5px 0%, 100% 0%, calc(100% - 5px) 100%, 0% 100%);
+}
+
+.riot-input:focus {
+  border-color: var(--accent-color);
+  background-color: var(--bg-primary);
+  box-shadow: 0 0 10px var(--accent-glow);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseGlow {
+  0%, 100% { filter: drop-shadow(0 0 5px rgba(16, 185, 129, 0.3)); }
+  50% { filter: drop-shadow(0 0 15px rgba(16, 185, 129, 0.6)); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.8s var(--transition-smooth) forwards;
+}
+
+/* Utility to hide App.css content or reset */
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}

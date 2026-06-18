@@ -1,0 +1,133 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 675">
+  <defs>
+    <radialGradient id="eyeGlow" cx="72%" cy="38%" r="25%" gradientUnits="objectBoundingBox">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.55"/>
+      <stop offset="60%" stop-color="#064e3b" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#070b0a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="groundFog" cx="50%" cy="100%" r="60%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#070b0a" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="blur1">
+      <feGaussianBlur stdDeviation="8"/>
+    </filter>
+    <filter id="blur2">
+      <feGaussianBlur stdDeviation="3"/>
+    </filter>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+  </defs>
+
+  <!-- Sky - very dark -->
+  <rect width="1200" height="675" fill="#060c09"/>
+
+  <!-- Background green eye glow -->
+  <rect width="1200" height="675" fill="url(#eyeGlow)"/>
+
+  <!-- Stars (tiny pixels) -->
+  <rect x="100" y="40" width="2" height="2" fill="#c6f6d5" opacity="0.3"/>
+  <rect x="250" y="80" width="2" height="2" fill="#c6f6d5" opacity="0.2"/>
+  <rect x="450" y="30" width="2" height="2" fill="#c6f6d5" opacity="0.4"/>
+  <rect x="600" y="60" width="2" height="2" fill="#c6f6d5" opacity="0.25"/>
+  <rect x="900" y="20" width="2" height="2" fill="#c6f6d5" opacity="0.35"/>
+  <rect x="1050" y="90" width="2" height="2" fill="#c6f6d5" opacity="0.2"/>
+  <rect x="1150" y="55" width="2" height="2" fill="#c6f6d5" opacity="0.3"/>
+  <rect x="350" y="110" width="2" height="2" fill="#c6f6d5" opacity="0.15"/>
+  <rect x="780" y="45" width="2" height="2" fill="#c6f6d5" opacity="0.3"/>
+
+  <!-- Far background trees (faint, distant) -->
+  <rect x="80" y="260" width="18" height="280" fill="#0a100c" opacity="0.6"/>
+  <rect x="130" y="220" width="22" height="320" fill="#0a100c" opacity="0.5"/>
+  <rect x="200" y="280" width="14" height="260" fill="#0a100c" opacity="0.6"/>
+  <rect x="950" y="240" width="20" height="300" fill="#0a100c" opacity="0.5"/>
+  <rect x="1010" y="200" width="16" height="340" fill="#0a100c" opacity="0.6"/>
+  <rect x="1080" y="270" width="24" height="270" fill="#0a100c" opacity="0.5"/>
+  <rect x="1130" y="250" width="18" height="290" fill="#0a100c" opacity="0.55"/>
+
+  <!-- Mid trees -->
+  <rect x="0" y="200" width="28" height="475" fill="#08120c"/>
+  <rect x="30" y="240" width="20" height="435" fill="#08120c"/>
+  <rect x="60" y="180" width="35" height="495" fill="#071009"/>
+  <rect x="160" y="170" width="30" height="505" fill="#071009"/>
+  <rect x="860" y="170" width="32" height="505" fill="#071009"/>
+  <rect x="920" y="210" width="25" height="465" fill="#08120c"/>
+  <rect x="970" y="180" width="36" height="495" fill="#071009"/>
+  <rect x="1060" y="190" width="28" height="485" fill="#071009"/>
+  <rect x="1110" y="160" width="40" height="515" fill="#071009"/>
+  <rect x="1170" y="200" width="30" height="475" fill="#08120c"/>
+
+  <!-- Fog layers -->
+  <rect x="0" y="440" width="1200" height="80" fill="#d1fae5" opacity="0.025"/>
+  <rect x="0" y="490" width="1200" height="60" fill="#a7f3d0" opacity="0.03"/>
+  <rect x="0" y="520" width="1200" height="60" fill="#ecfdf5" opacity="0.04"/>
+  <rect x="0" y="540" width="1200" height="80" fill="#ecfdf5" opacity="0.03"/>
+
+  <!-- THE GIANT EYE (distant, in the center-right) -->
+  <!-- Outer glow -->
+  <ellipse cx="864" cy="248" rx="140" ry="90" fill="#10b981" opacity="0.06" filter="url(#blur1)"/>
+  <ellipse cx="864" cy="248" rx="100" ry="65" fill="#10b981" opacity="0.1" filter="url(#blur2)"/>
+  <!-- Eyelid top shape -->
+  <path d="M 764 248 Q 864 178 964 248" fill="#060c09"/>
+  <!-- Eyelid bottom shape -->
+  <path d="M 764 248 Q 864 318 964 248" fill="#060c09"/>
+  <!-- Iris glow ring -->
+  <ellipse cx="864" cy="248" rx="68" ry="44" fill="#059669" opacity="0.7" filter="url(#glow)"/>
+  <!-- Iris -->
+  <ellipse cx="864" cy="248" rx="55" ry="36" fill="#10b981" opacity="0.9"/>
+  <!-- Iris texture rings -->
+  <ellipse cx="864" cy="248" rx="46" ry="30" fill="none" stroke="#34d399" stroke-width="2" opacity="0.5"/>
+  <ellipse cx="864" cy="248" rx="36" ry="23" fill="none" stroke="#6ee7b7" stroke-width="1.5" opacity="0.4"/>
+  <!-- Pupil -->
+  <ellipse cx="864" cy="248" rx="20" ry="26" fill="#020f06"/>
+  <!-- Highlight -->
+  <ellipse cx="856" cy="238" rx="8" ry="6" fill="#a7f3d0" opacity="0.7"/>
+  <!-- Eyelid lines (visible) -->
+  <path d="M 764 248 Q 864 178 964 248" fill="none" stroke="#0a160f" stroke-width="4"/>
+  <path d="M 764 248 Q 864 318 964 248" fill="none" stroke="#0a160f" stroke-width="4"/>
+
+  <!-- Ground fog (thick at bottom) -->
+  <rect width="1200" height="675" fill="url(#groundFog)"/>
+
+  <!-- Ground -->
+  <rect x="0" y="590" width="1200" height="85" fill="#040a06"/>
+
+  <!-- Grass tufts pixel art -->
+  <rect x="210" y="586" width="4" height="8" fill="#14532d" opacity="0.8"/>
+  <rect x="218" y="588" width="4" height="6" fill="#14532d" opacity="0.6"/>
+  <rect x="400" y="584" width="4" height="10" fill="#14532d" opacity="0.7"/>
+  <rect x="410" y="587" width="4" height="7" fill="#14532d" opacity="0.5"/>
+  <rect x="600" y="586" width="4" height="8" fill="#14532d" opacity="0.8"/>
+  <rect x="800" y="585" width="4" height="9" fill="#14532d" opacity="0.6"/>
+
+  <!-- PATH light (where child is heading) -->
+  <ellipse cx="290" cy="595" rx="60" ry="8" fill="#10b981" opacity="0.08" filter="url(#blur2)"/>
+
+  <!-- CHILD SILHOUETTE (small, left-center) -->
+  <!-- Head -->
+  <ellipse cx="290" cy="544" rx="11" ry="13" fill="#020605"/>
+  <!-- Hood/oversized hoodie -->
+  <rect x="279" y="534" width="22" height="8" rx="4" fill="#020605"/>
+  <!-- Body/raincoat (oversized) -->
+  <rect x="275" y="541" width="30" height="36" rx="4" fill="#020605"/>
+  <!-- Arms -->
+  <rect x="263" y="543" width="13" height="24" rx="3" fill="#020605"/>
+  <rect x="304" y="543" width="13" height="24" rx="3" fill="#020605"/>
+  <!-- Legs -->
+  <rect x="279" y="574" width="11" height="20" fill="#020605"/>
+  <rect x="292" y="574" width="11" height="20" fill="#020605"/>
+  <!-- Feet -->
+  <rect x="276" y="591" width="14" height="6" rx="2" fill="#020605"/>
+  <rect x="289" y="591" width="14" height="6" rx="2" fill="#020605"/>
+
+  <!-- Small green lantern glow near child -->
+  <ellipse cx="308" cy="558" rx="15" ry="12" fill="#10b981" opacity="0.3" filter="url(#blur2)"/>
+  <rect x="305" y="553" width="6" height="8" rx="2" fill="#34d399" opacity="0.8"/>
+
+  <!-- Scan line texture overlay (pixel art feel) -->
+  <rect x="0" y="0" width="1200" height="1" fill="#000" opacity="0.2"/>
+  <rect x="0" y="4" width="1200" height="1" fill="#000" opacity="0.1"/>
+  <rect x="0" y="8" width="1200" height="1" fill="#000" opacity="0.15"/>
+</svg>

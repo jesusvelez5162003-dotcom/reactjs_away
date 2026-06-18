@@ -1,0 +1,6 @@
+/* App-specific custom utility classes */
+.app-content {
+  flex-grow: 1;
+  padding-top: var(--header-height);
+  background-color: var(--bg-primary);
+}

@@ -1,0 +1,161 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="lanternLight" cx="50%" cy="55%" r="40%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#020a05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mushroomGlow1" cx="20%" cy="80%" r="15%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#020a05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="mushroomGlow2" cx="80%" cy="85%" r="12%">
+      <stop offset="0%" stop-color="#34d399" stop-opacity="0.4"/>
+      <stop offset="100%" stop-color="#020a05" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="5" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+  </defs>
+
+  <!-- Deep dark background -->
+  <rect width="800" height="500" fill="#030908"/>
+
+  <!-- Lantern glow center -->
+  <rect width="800" height="500" fill="url(#lanternLight)"/>
+
+  <!-- Mushroom glows -->
+  <rect width="800" height="500" fill="url(#mushroomGlow1)"/>
+  <rect width="800" height="500" fill="url(#mushroomGlow2)"/>
+
+  <!-- Background fog bands -->
+  <rect x="0" y="200" width="800" height="40" fill="#ecfdf5" opacity="0.02"/>
+  <rect x="0" y="280" width="800" height="30" fill="#ecfdf5" opacity="0.015"/>
+
+  <!-- Twisted trees / walls -->
+  <!-- Left wall -->
+  <rect x="0" y="0" width="80" height="500" fill="#040d07"/>
+  <rect x="75" y="0" width="20" height="500" fill="#061009"/>
+  <!-- Root lumps left -->
+  <ellipse cx="40" cy="480" rx="55" ry="30" fill="#040d07"/>
+  <ellipse cx="75" cy="470" rx="25" ry="20" fill="#040d07"/>
+
+  <!-- Right wall -->
+  <rect x="720" y="0" width="80" height="500" fill="#040d07"/>
+  <rect x="705" y="0" width="20" height="500" fill="#061009"/>
+  <!-- Root lumps right -->
+  <ellipse cx="760" cy="480" rx="55" ry="30" fill="#040d07"/>
+  <ellipse cx="725" cy="470" rx="25" ry="20" fill="#040d07"/>
+
+  <!-- Ceiling roots/vines hanging -->
+  <rect x="120" y="0" width="8" height="80" fill="#050f08"/>
+  <rect x="200" y="0" width="5" height="110" fill="#050f08"/>
+  <rect x="320" y="0" width="6" height="60" fill="#050f08"/>
+  <rect x="480" y="0" width="5" height="90" fill="#050f08"/>
+  <rect x="560" y="0" width="8" height="70" fill="#050f08"/>
+  <rect x="660" y="0" width="4" height="100" fill="#050f08"/>
+  <!-- Vine ends (teardrop shaped blobs) -->
+  <ellipse cx="124" cy="83" rx="10" ry="8" fill="#050f08"/>
+  <ellipse cx="202" cy="115" rx="8" ry="7" fill="#050f08"/>
+  <ellipse cx="323" cy="63" rx="8" ry="6" fill="#050f08"/>
+  <ellipse cx="482" cy="93" rx="8" ry="7" fill="#050f08"/>
+  <ellipse cx="564" cy="73" rx="9" ry="7" fill="#050f08"/>
+  <ellipse cx="662" cy="103" rx="7" ry="6" fill="#050f08"/>
+
+  <!-- Floor/ground -->
+  <rect x="0" y="430" width="800" height="70" fill="#030908"/>
+  <!-- Floor texture bumps (roots) -->
+  <ellipse cx="160" cy="438" rx="60" ry="16" fill="#040d07"/>
+  <ellipse cx="420" cy="436" rx="70" ry="14" fill="#040d07"/>
+  <ellipse cx="650" cy="440" rx="50" ry="18" fill="#040d07"/>
+
+  <!-- PIXEL ART MUSHROOMS - Left side, glowing green -->
+  <!-- Mushroom 1 (big) -->
+  <rect x="88" y="370" width="6" height="50" fill="#064e3b"/>
+  <rect x="82" y="380" width="20" height="6" fill="#064e3b"/>
+  <!-- Cap -->
+  <rect x="76" y="348" width="32" height="26" rx="12" fill="#10b981"/>
+  <rect x="80" y="344" width="24" height="10" rx="5" fill="#34d399"/>
+  <!-- Spots -->
+  <rect x="84" y="352" width="4" height="4" rx="1" fill="#a7f3d0" opacity="0.7"/>
+  <rect x="94" y="356" width="3" height="3" rx="1" fill="#a7f3d0" opacity="0.6"/>
+  <!-- Glow -->
+  <ellipse cx="92" cy="358" rx="25" ry="18" fill="#10b981" opacity="0.2" filter="url(#softBlur)"/>
+
+  <!-- Mushroom 2 (small) -->
+  <rect x="130" y="395" width="4" height="28" fill="#064e3b"/>
+  <rect x="118" y="376" width="28" height="20" rx="10" fill="#059669"/>
+  <rect x="122" y="372" width="20" height="8" rx="4" fill="#10b981"/>
+  <!-- Glow -->
+  <ellipse cx="132" cy="384" rx="18" ry="13" fill="#10b981" opacity="0.15" filter="url(#softBlur)"/>
+
+  <!-- PIXEL ART MUSHROOMS - Right side -->
+  <!-- Mushroom 3 (tall) -->
+  <rect x="660" y="350" width="6" height="70" fill="#064e3b"/>
+  <rect x="652" y="362" width="22" height="6" fill="#064e3b"/>
+  <!-- Cap -->
+  <rect x="645" y="322" width="36" height="30" rx="14" fill="#10b981"/>
+  <rect x="649" y="317" width="28" height="12" rx="6" fill="#34d399"/>
+  <!-- Spots -->
+  <rect x="654" y="328" width="5" height="5" rx="1" fill="#a7f3d0" opacity="0.7"/>
+  <rect x="665" y="334" width="4" height="4" rx="1" fill="#a7f3d0" opacity="0.6"/>
+  <rect x="656" y="338" width="3" height="3" rx="1" fill="#d1fae5" opacity="0.5"/>
+  <!-- Glow -->
+  <ellipse cx="663" cy="338" rx="28" ry="20" fill="#10b981" opacity="0.2" filter="url(#softBlur)"/>
+
+  <!-- Mushroom 4 (small right) -->
+  <rect x="700" y="400" width="4" height="24" fill="#064e3b"/>
+  <rect x="694" y="382" width="22" height="18" rx="9" fill="#059669"/>
+  <rect x="697" y="378" width="16" height="8" rx="4" fill="#10b981"/>
+  <ellipse cx="702" cy="388" rx="16" ry="12" fill="#10b981" opacity="0.15" filter="url(#softBlur)"/>
+
+  <!-- THE CHILD PROTAGONIST (center, facing forward/slight angle) -->
+  <!-- Shadow on ground -->
+  <ellipse cx="400" cy="435" rx="28" ry="8" fill="#000" opacity="0.6"/>
+
+  <!-- Lantern glow light on floor -->
+  <ellipse cx="400" cy="420" rx="60" ry="30" fill="#10b981" opacity="0.12" filter="url(#softBlur)"/>
+
+  <!-- CHILD - full body silhouette with slight detail -->
+  <!-- Legs -->
+  <rect x="385" y="388" width="12" height="42" fill="#0a1a0e"/>
+  <rect x="401" y="388" width="12" height="42" fill="#0a1a0e"/>
+  <!-- Feet/boots -->
+  <rect x="382" y="426" width="16" height="8" rx="2" fill="#071209"/>
+  <rect x="397" y="426" width="16" height="8" rx="2" fill="#071209"/>
+
+  <!-- Body / Oversized Raincoat -->
+  <rect x="376" y="310" width="46" height="82" rx="6" fill="#0a1a0e"/>
+  <!-- Coat flare bottom -->
+  <rect x="372" y="370" width="54" height="20" rx="4" fill="#081508"/>
+
+  <!-- Arms hanging -->
+  <rect x="360" y="316" width="18" height="48" rx="5" fill="#0a1a0e"/>
+  <rect x="420" y="316" width="18" height="48" rx="5" fill="#0a1a0e"/>
+
+  <!-- Hands -->
+  <rect x="358" y="361" width="14" height="12" rx="4" fill="#081508"/>
+  <!-- Lantern in right hand -->
+  <rect x="436" y="358" width="10" height="14" rx="2" fill="#0c1e12"/>
+  <rect x="437" y="356" width="8" height="4" fill="#0c1e12"/>
+  <!-- Lantern glass glow -->
+  <rect x="438" y="360" width="6" height="8" rx="1" fill="#34d399" opacity="0.9" filter="url(#glow)"/>
+  <ellipse cx="441" cy="364" rx="12" ry="10" fill="#10b981" opacity="0.3" filter="url(#softBlur)"/>
+
+  <!-- Head -->
+  <ellipse cx="399" cy="295" rx="24" ry="26" fill="#0a1a0e"/>
+  <!-- Hood -->
+  <ellipse cx="399" cy="280" rx="28" ry="22" fill="#081508"/>
+  <!-- Hood shadow peak -->
+  <rect x="385" y="268" width="28" height="16" rx="6" fill="#071209"/>
+
+  <!-- Eyes (tiny green glints) -->
+  <rect x="391" y="292" width="4" height="4" rx="1" fill="#34d399" opacity="0.6"/>
+  <rect x="402" y="292" width="4" height="4" rx="1" fill="#34d399" opacity="0.6"/>
+
+  <!-- Pixel scan overlay -->
+  <rect x="0" y="0" width="800" height="500" fill="#000" opacity="0.05"/>
+</svg>

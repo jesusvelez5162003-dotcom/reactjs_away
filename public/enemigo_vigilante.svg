@@ -1,0 +1,181 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 500">
+  <defs>
+    <radialGradient id="droneGlow" cx="50%" cy="40%" r="30%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.5"/>
+      <stop offset="100%" stop-color="#020a05" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="beamCore" cx="50%" cy="0%" r="100%">
+      <stop offset="0%" stop-color="#10b981" stop-opacity="0.6"/>
+      <stop offset="100%" stop-color="#10b981" stop-opacity="0"/>
+    </radialGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="8" result="blur"/>
+      <feMerge><feMergeNode in="blur"/><feMergeNode in="SourceGraphic"/></feMerge>
+    </filter>
+    <filter id="softBlur">
+      <feGaussianBlur stdDeviation="4"/>
+    </filter>
+    <filter id="bigBlur">
+      <feGaussianBlur stdDeviation="12"/>
+    </filter>
+  </defs>
+
+  <!-- Deep dark background -->
+  <rect width="800" height="500" fill="#030809"/>
+
+  <!-- Background atmospheric glow -->
+  <rect width="800" height="500" fill="url(#droneGlow)"/>
+
+  <!-- Floor -->
+  <rect x="0" y="440" width="800" height="60" fill="#040c0a"/>
+  <rect x="0" y="440" width="800" height="2" fill="#071612" opacity="0.7"/>
+
+  <!-- Floor grid pattern (abandoned facility) -->
+  <rect x="0" y="450" width="800" height="1" fill="#071612" opacity="0.3"/>
+  <rect x="0" y="465" width="800" height="1" fill="#071612" opacity="0.3"/>
+  <rect x="100" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+  <rect x="200" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+  <rect x="300" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+  <rect x="400" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+  <rect x="500" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+  <rect x="600" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+  <rect x="700" y="440" width="1" height="60" fill="#071612" opacity="0.2"/>
+
+  <!-- Scan beam path on floor (where the drone's light sweeps) -->
+  <polygon points="400,190 200,442 600,442" fill="#10b981" opacity="0.06"/>
+  <polygon points="400,190 240,442 560,442" fill="#10b981" opacity="0.07"/>
+  <polygon points="400,190 280,442 520,442" fill="#10b981" opacity="0.08"/>
+  <!-- Scan beam bright center -->
+  <polygon points="400,190 350,442 450,442" fill="#10b981" opacity="0.18"/>
+  <!-- Floor light where beam hits -->
+  <ellipse cx="400" cy="444" rx="100" ry="10" fill="#10b981" opacity="0.25" filter="url(#softBlur)"/>
+
+  <!-- Background broken walls -->
+  <rect x="0" y="0" width="40" height="500" fill="#040c0a"/>
+  <rect x="760" y="0" width="40" height="500" fill="#040c0a"/>
+  <!-- Cracked wall pattern left -->
+  <rect x="50" y="100" width="80" height="340" fill="#050e0b" opacity="0.6"/>
+  <rect x="130" y="80" width="60" height="360" fill="#04090a" opacity="0.4"/>
+  <!-- Cracked wall right -->
+  <rect x="670" y="100" width="80" height="340" fill="#050e0b" opacity="0.6"/>
+  <rect x="610" y="80" width="60" height="360" fill="#04090a" opacity="0.4"/>
+
+  <!-- Broken pipes top -->
+  <rect x="0" y="0" width="800" height="30" fill="#04090a"/>
+  <rect x="0" y="28" width="800" height="4" fill="#071612" opacity="0.5"/>
+  <rect x="200" y="0" width="16" height="60" fill="#050e0b"/>
+  <rect x="580" y="0" width="16" height="45" fill="#050e0b"/>
+
+  <!-- THE VIGILANTE CIEGO - Floating surveillance drone -->
+
+  <!-- Multiple drones in background (smaller, distant) -->
+  <!-- Distant drone 1 -->
+  <ellipse cx="150" cy="280" rx="22" ry="18" fill="#061009" opacity="0.7"/>
+  <ellipse cx="150" cy="280" rx="16" ry="12" fill="#0a1a0e" opacity="0.7"/>
+  <ellipse cx="150" cy="280" rx="6" ry="5" fill="#10b981" opacity="0.3" filter="url(#softBlur)"/>
+  <line x1="128" y1="280" x2="108" y2="280" stroke="#081609" stroke-width="2" opacity="0.6"/>
+  <line x1="172" y1="280" x2="192" y2="280" stroke="#081609" stroke-width="2" opacity="0.6"/>
+  <line x1="150" y1="262" x2="150" y2="248" stroke="#081609" stroke-width="2" opacity="0.6"/>
+  <polygon points="150,298 120,380 180,380" fill="#10b981" opacity="0.04"/>
+
+  <!-- Distant drone 2 -->
+  <ellipse cx="650" cy="240" rx="18" ry="14" fill="#061009" opacity="0.6"/>
+  <ellipse cx="650" cy="240" rx="12" ry="9" fill="#0a1a0e" opacity="0.6"/>
+  <ellipse cx="650" cy="240" rx="5" ry="4" fill="#10b981" opacity="0.25" filter="url(#softBlur)"/>
+  <line x1="632" y1="240" x2="615" y2="240" stroke="#081609" stroke-width="2" opacity="0.5"/>
+  <line x1="668" y1="240" x2="685" y2="240" stroke="#081609" stroke-width="2" opacity="0.5"/>
+  <line x1="650" y1="226" x2="650" y2="212" stroke="#081609" stroke-width="2" opacity="0.5"/>
+  <polygon points="650,254 625,350 675,350" fill="#10b981" opacity="0.03"/>
+
+  <!-- MAIN DRONE (center, large) -->
+  <!-- Outer glow -->
+  <ellipse cx="400" cy="170" rx="120" ry="100" fill="#10b981" opacity="0.08" filter="url(#bigBlur)"/>
+  <!-- Drone body (rusty sphere) -->
+  <!-- Outer rust shell -->
+  <ellipse cx="400" cy="170" rx="80" ry="72" fill="#0a1a0e"/>
+  <!-- Middle layer -->
+  <ellipse cx="400" cy="168" rx="68" ry="62" fill="#0c1e12"/>
+  <!-- Plating details -->
+  <rect x="352" y="138" width="96" height="12" rx="4" fill="#0f2516" opacity="0.7"/>
+  <rect x="344" y="152" width="112" height="10" rx="3" fill="#0f2516" opacity="0.5"/>
+  <rect x="360" y="163" width="80" height="8" rx="3" fill="#0f2516" opacity="0.4"/>
+  <rect x="356" y="173" width="88" height="8" rx="3" fill="#0f2516" opacity="0.4"/>
+  <rect x="364" y="183" width="72" height="8" rx="3" fill="#0f2516" opacity="0.3"/>
+  <rect x="372" y="193" width="56" height="8" rx="3" fill="#0f2516" opacity="0.25"/>
+  <!-- Rust spots -->
+  <ellipse cx="360" cy="155" rx="8" ry="6" fill="#162a1a" opacity="0.6"/>
+  <ellipse cx="445" cy="168" rx="6" ry="5" fill="#162a1a" opacity="0.5"/>
+  <ellipse cx="388" cy="188" rx="5" ry="4" fill="#162a1a" opacity="0.4"/>
+
+  <!-- Bolts around equator -->
+  <rect x="322" y="165" width="8" height="8" rx="2" fill="#0e2012"/>
+  <rect x="470" y="165" width="8" height="8" rx="2" fill="#0e2012"/>
+  <rect x="350" y="135" width="8" height="8" rx="2" fill="#0e2012"/>
+  <rect x="442" y="135" width="8" height="8" rx="2" fill="#0e2012"/>
+  <rect x="350" y="198" width="8" height="8" rx="2" fill="#0e2012"/>
+  <rect x="442" y="198" width="8" height="8" rx="2" fill="#0e2012"/>
+
+  <!-- CENTRAL EYE / BEAM LENS -->
+  <!-- Eye outer ring (glowing) -->
+  <ellipse cx="400" cy="170" rx="28" ry="26" fill="#064e3b" opacity="0.9" filter="url(#glow)"/>
+  <!-- Eye middle ring -->
+  <ellipse cx="400" cy="170" rx="20" ry="18" fill="#059669"/>
+  <!-- Eye iris -->
+  <ellipse cx="400" cy="170" rx="13" ry="12" fill="#10b981"/>
+  <!-- Pupil / beam emitter -->
+  <ellipse cx="400" cy="170" rx="6" ry="5" fill="#020605"/>
+  <!-- Beam emitter core -->
+  <ellipse cx="400" cy="170" rx="4" ry="3" fill="#34d399" opacity="0.9" filter="url(#glow)"/>
+  <!-- Concentric rings on eye -->
+  <ellipse cx="400" cy="170" rx="18" ry="16" fill="none" stroke="#6ee7b7" stroke-width="1" opacity="0.4"/>
+  <ellipse cx="400" cy="170" rx="24" ry="22" fill="none" stroke="#34d399" stroke-width="1" opacity="0.3"/>
+
+  <!-- DRONE APPENDAGES / ROTORS -->
+  <!-- Rotor arm left -->
+  <rect x="318" y="164" width="44" height="8" rx="3" fill="#0c1e12"/>
+  <!-- Rotor left -->
+  <ellipse cx="310" cy="168" rx="18" ry="6" fill="#0f2516" opacity="0.7"/>
+  <rect x="294" y="160" width="32" height="4" rx="2" fill="#0f2516"/>
+  <rect x="306" y="154" width="4" height="28" rx="2" fill="#0f2516"/>
+
+  <!-- Rotor arm right -->
+  <rect x="438" y="164" width="44" height="8" rx="3" fill="#0c1e12"/>
+  <!-- Rotor right -->
+  <ellipse cx="490" cy="168" rx="18" ry="6" fill="#0f2516" opacity="0.7"/>
+  <rect x="474" y="160" width="32" height="4" rx="2" fill="#0f2516"/>
+  <rect x="486" y="154" width="4" height="28" rx="2" fill="#0f2516"/>
+
+  <!-- Top antenna -->
+  <rect x="396" y="96" width="8" height="46" fill="#0c1e12"/>
+  <ellipse cx="400" cy="93" rx="10" ry="8" fill="#0e2012"/>
+  <!-- Antenna tip signal pulse -->
+  <ellipse cx="400" cy="86" rx="6" ry="6" fill="#10b981" opacity="0.5" filter="url(#glow)"/>
+  <ellipse cx="400" cy="86" rx="12" ry="12" fill="#10b981" opacity="0.2" filter="url(#softBlur)"/>
+
+  <!-- Bottom sensor/emitter housing -->
+  <rect x="380" y="238" width="40" height="20" rx="4" fill="#0c1e12"/>
+  <rect x="388" y="242" width="24" height="12" rx="2" fill="#071609"/>
+  <!-- Beam exit port -->
+  <ellipse cx="400" cy="258" rx="10" ry="8" fill="#10b981" opacity="0.6" filter="url(#glow)"/>
+
+  <!-- Status light blinking (red warning) -->
+  <rect x="368" y="142" width="6" height="6" rx="1" fill="#ef4444" opacity="0.8"/>
+
+  <!-- Grid scan projection on floor (what it sees) -->
+  <!-- Horizontal grid lines on floor -->
+  <rect x="260" y="442" width="280" height="1" fill="#10b981" opacity="0.25"/>
+  <rect x="270" y="456" width="260" height="1" fill="#10b981" opacity="0.2"/>
+  <rect x="280" y="470" width="240" height="1" fill="#10b981" opacity="0.15"/>
+  <!-- Vertical grid lines on floor -->
+  <rect x="280" y="440" width="1" height="60" fill="#10b981" opacity="0.2"/>
+  <rect x="320" y="440" width="1" height="60" fill="#10b981" opacity="0.2"/>
+  <rect x="360" y="440" width="1" height="60" fill="#10b981" opacity="0.2"/>
+  <rect x="400" y="440" width="1" height="60" fill="#10b981" opacity="0.25"/>
+  <rect x="440" y="440" width="1" height="60" fill="#10b981" opacity="0.2"/>
+  <rect x="480" y="440" width="1" height="60" fill="#10b981" opacity="0.2"/>
+  <rect x="520" y="440" width="1" height="60" fill="#10b981" opacity="0.2"/>
+
+  <!-- Mechanical hum lines (vibration effect) -->
+  <rect x="322" y="161" width="80" height="1" fill="#10b981" opacity="0.15"/>
+  <rect x="326" y="169" width="72" height="1" fill="#10b981" opacity="0.12"/>
+</svg>
