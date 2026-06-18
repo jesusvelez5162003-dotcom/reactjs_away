@@ -1,16 +1,68 @@
-# React + Vite
+﻿# AWAY — Presentación del juego
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+AWAY es una landing page interactiva que presenta un prototipo de juego indie en 2D. Esta aplicación permite conocer la historia, ver capturas de pantalla, consultar requisitos del sistema y registrarse para recibir noticias de la demo.
 
-Currently, two official plugins are available:
+## Qué puedes encontrar aquí
+- **Inicio**: presentación del juego y llamadas a la acción.
+- **Historia**: lore del mundo, personajes y enemigos.
+- **Presentación**: ficha técnica, descripción y requisitos.
+- **Galería**: imágenes del juego con vista ampliada.
+- **Registro**: formulario para unirse a las novedades y la demo técnica.
+- **Admin Portal**: acceso de demostración con credenciales de prueba.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Instalación
 
-## React Compiler
+### Requisitos
+- Node.js 18 o superior
+- npm
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+### Configuración local
+```bash
+git clone https://github.com/jesusvelez5162003-dotcom/reactjs_away.git
+cd reactjs_away
+npm install
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Abre la URL que muestre Vite en el navegador, por ejemplo `http://localhost:5173`.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Uso del proyecto
+### Como usuario
+- Navega entre las secciones desde el menú superior.
+- Haz clic en `Únete` o `Registro` para enviar tus datos.
+- El registro se guarda localmente en el navegador.
+- Accede a `Admin Portal` para ver el panel de administración de demo.
+
+### Acceso de administrador de demostración
+- Usuario: `admin`
+- Contraseña: `adminaway2026`
+
+### Qué puedes hacer en el panel de administración
+- Ver usuarios registrados.
+- Buscar y filtrar por nombre, región o interés.
+- Enviar mensajes simulados a todos o a usuarios específicos.
+- Editar y eliminar registros.
+
+## Construcción para producción
+```bash
+npm run build
+npm run preview
+```
+
+Esto genera la carpeta `dist` con los archivos listos para publicar.
+
+## Estructura del proyecto
+- `src/App.jsx`: aplicación principal y navegación entre pestañas.
+- `src/components/`: componentes de la interfaz.
+- `public/`: recursos públicos como imágenes y logos.
+- `package.json`: dependencias y scripts.
+- `DOCUMENTACION.md`: guía de usuario y desarrollador en español.
+
+## Tecnologías usadas
+- React 19
+- Vite 8
+- ESLint
+- `localStorage` para datos de demostración sin backend
+
+## Documentación adicional
+Consulta `DOCUMENTACION.md` para una guía detallada orientada a usuarios sin conocimientos técnicos y para desarrolladores.
